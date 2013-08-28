@@ -6,10 +6,16 @@ library(reshape2)
 library(ggplot2)
 #library(googleVis)
 
-cities.dat <- read.csv("dat1.csv",header=T,stringsAsFactors=F)
-cru.dat <- read.csv("dat2.csv",header=T,stringsAsFactors=F)
-sta.dat <- read.csv("dat3.csv",header=T,stringsAsFactors=F)
-staNA.dat <- read.csv("dat3b.csv",header=T,stringsAsFactors=F)
+#cities.dat <- read.csv("dat1.csv",header=T,stringsAsFactors=F)
+#cru.dat <- read.csv("dat2.csv",header=T,stringsAsFactors=F)
+#sta.dat <- read.csv("dat3.csv",header=T,stringsAsFactors=F)
+#staNA.dat <- read.csv("dat3b.csv",header=T,stringsAsFactors=F)
+
+cities.dat <- dat1
+cru.dat <- dat2
+sta.dat <- dat3
+staNA.dat <- dat3b
+
 cru.names <- gsub("_"," ",names(cru.dat)[-c(1:3)])
 names(cru.dat)[-c(1:3)] <- cru.names
 sta.names <- gsub("_"," ",substr(names(sta.dat)[-c(1:3)],3,nchar(names(sta.dat)[-c(1:3)])))
